@@ -59,8 +59,6 @@ size_t BLOCK_SIZE = 16;
                     __m256d vx = _mm256_loadu_pd(x);
                     __m256d vy = _mm256_loadu_pd(y);
 
-                    __m256d v = _mm256_mul_pd(vx, vy);
-
                     // Add: (vx * vy) + vx
                     __m256d vz = _mm256_fmadd_pd(vx, vy, vz);
 
